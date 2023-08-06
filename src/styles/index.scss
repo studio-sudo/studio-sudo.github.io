@@ -1,5 +1,6 @@
 @import "./fonts";
 @import "./colors";
+@import "./variables";
 @import "bootstrap/scss/bootstrap-grid";
 
 body {
@@ -25,21 +26,31 @@ h2 {
 }
 
 .stripe {
+  margin: 50px 0;
   h2 {
     font-size: 1.5em;
     line-height: 1.5em;
     margin: 0.5em 0;
     text-align: start;
     color: var(--green-dark-color);
+    &.centered {
+      text-align: center;
+    }
   }
   .lead-text {
     font-size: 2.25em;
     line-height: 1.3em;
     text-align: left;
+    &.centered {
+      text-align: center;
+    }
   }
   .content-text {
     margin-top: 30px;
     text-align: left;
     line-height: 1.5;
+    &.centered {
+      text-align: center;
+    }
   }
 }
