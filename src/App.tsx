@@ -4,6 +4,7 @@ import { Header } from './components/Header'
 import { StartCard } from './cards/StartCard'
 import { ServicesCard } from './cards/ServicesCard';
 import { AboutUsCard } from './cards/AboutUsCard';
+import { BlogCard } from './cards/BlogCard';
 
 const debounce = (fn: (...args: unknown[]) => void) => {
   let frame: number;
@@ -36,8 +37,8 @@ function App() {
       {/* 
       <FaqCard/> as part pf ServicesCard
       <ContactCard/>
-      <BlogCard/> 
       */}
+      <BlogCard />
       <AboutUsCard />
     </>
   )
