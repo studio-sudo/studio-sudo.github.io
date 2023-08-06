@@ -28,10 +28,19 @@
         width: 64px;
         height: 64px;
         border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 70%;
+        }
         &-1 {
             top: 25%;
-            left: 17%;
+            left: 40%;
             background-color: var(--green-color);
+            img {
+                width: 60%;
+            }
         }
         &-2 {
             top: 75%;
@@ -42,6 +51,21 @@
             top: 15%;
             left: 75%;
             background-color: var(--green-gray-color);
+        }
+        &-4 {
+            top: 10%;
+            left: 5%;
+            background-color: var(--pink-light-color);
+            -webkit-mask: url('/icons/watch.svg') no-repeat center;
+            mask: url('/icons/watch.svg') no-repeat center;
+        }
+        &-5 {
+            top: 80%;
+            left: 90%;
+            background-color: var(--cyan-light-color);
+            border-radius: 0;
+            -webkit-mask: url('/icons/money-atom.svg') no-repeat center;
+            mask: url('/icons/money-atom.svg') no-repeat center;
         }
     }
 }
