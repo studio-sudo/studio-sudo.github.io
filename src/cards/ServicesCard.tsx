@@ -45,7 +45,32 @@ export function ServicesCard() {
     return (
       <div id="services" className='card'>
         <div className="fancy-vector"></div>
-        
+        <div className="info">
+            <h2>Nasze usługi</h2>
+            <div className="lead-text mb-3">Czego dokładnie potrzebujesz?</div>
+            <div className="sections">
+                <div>
+                    <div className="icon icon-1"></div>
+                    <h3>Aplikacje Desktopowe</h3>
+                    <div className="desc">Niech Twoje oprogramowanie będzie nie tylko wydajne, ale także intuicyjne. Dzięki naszym aplikacjom desktopowym osiągniesz nowy poziom efektywności i kontroli nad działaniem Twojego biznesu.</div>
+                </div>
+                <div>
+                    <div className="icon icon-2"></div>
+                    <h3>Strony Internetowe</h3>
+                    <div className="desc">Twoja witryna to wizytówka Twojej firmy w świecie online. Nasze strony internetowe nie tylko zachwycą estetyką, ale są także zoptymalizowane pod kątem wydajności i pozycjonowania, przyciągając nowych klientów.</div>
+                </div>
+                <div>
+                    <div className="icon icon-3"></div>
+                    <h3>Aplikacje Webowe</h3>
+                    <div className="desc">Tworzymy dynamiczne aplikacje internetowe, które nie tylko zachwycą użytkowników swoim wyglądem, ale także zapewnią im płynne i zaawansowane doświadczenia online.</div>
+                </div>
+                <div>
+                    <div className="icon icon-4"></div>
+                    <h3>Sztuczna Inteligencja (AI)</h3>
+                    <div className="desc">Wprowadź swoją firmę w erę nowoczesności dzięki naszym zaawansowanym rozwiązaniom opartym na Sztucznej Inteligencji. Optymalizuj procesy, analizuj dane oraz prognozuj trendy z niespotykaną wcześniej precyzją.</div>
+                </div>
+            </div>
+        </div>
       </div>
     )
 }
