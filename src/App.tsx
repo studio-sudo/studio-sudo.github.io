@@ -9,13 +9,13 @@ const debounce = (fn: (...args: unknown[]) => void) => {
   let frame: number;
 
   return (...params: Parameters<typeof fn>) => {
-      if (frame) {
-          cancelAnimationFrame(frame);
-      }
+    if (frame) {
+      cancelAnimationFrame(frame);
+    }
 
-      frame = requestAnimationFrame(() => {
-          fn(...params);
-      });
+    frame = requestAnimationFrame(() => {
+      fn(...params);
+    });
   };
 };
 
@@ -30,10 +30,15 @@ function App() {
   }, []);
   return (
     <>
-      <Header/>
-      <StartCard/>
-      <ServicesCard/>
-      <AboutUsCard/>
+      <Header />
+      <StartCard />
+      <ServicesCard />
+      {/* 
+      <FaqCard/> as part pf ServicesCard
+      <ContactCard/>
+      <BlogCard/> 
+      */}
+      <AboutUsCard />
     </>
   )
 }
