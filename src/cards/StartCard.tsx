@@ -25,25 +25,25 @@ export function StartCard() {
             .play();
     
         gsap.timeline({ repeat: -1, repeatDelay: 2, delay: 2 })
-            .to(".icon.icon-1", { scale: 1.1, duration: 0.5 })
-            .to(".icon.icon-1", { scale: 1, duration: 0.5 })
+            .to("#title .icon.icon-1", { scale: 1.1, duration: 0.5 })
+            .to("#title .icon.icon-1", { scale: 1, duration: 0.5 })
             .play();
 
         gsap.timeline({ repeat: -1, repeatDelay: 2, delay: 3 })
-            .to(".icon.icon-2", { x: "+=8", y: "-=8", ease: 'sine.inout', duration: 1 })
-            .to(".icon.icon-2", { x: "-=16", y: "+=16", ease: 'sine.inout', duration: 2 })
-            .to(".icon.icon-2", { x: "+=8", y: "-=8", ease: 'sine.inout', duration: 1 })
+            .to("#title .icon.icon-2", { x: "+=8", y: "-=8", ease: 'sine.inout', duration: 1 })
+            .to("#title .icon.icon-2", { x: "-=16", y: "+=16", ease: 'sine.inout', duration: 2 })
+            .to("#title .icon.icon-2", { x: "+=8", y: "-=8", ease: 'sine.inout', duration: 1 })
             .play();
 
         gsap.timeline({ repeat: -1, repeatDelay: 2, delay: 2.5})
-            .to(".icon.icon-3", { rotation: "+=30", duration: 1 })
-            .to(".icon.icon-3", { rotation: "-=30", ease: 'elastic', duration: 1})
+            .to("#title .icon.icon-3", { rotation: "+=30", duration: 1 })
+            .to("#title .icon.icon-3", { rotation: "-=30", ease: 'elastic', duration: 1})
             .play();
 
         gsap.timeline({ repeat: -1, repeatDelay: 2, delay: 3.5})
-            .set(".icon.icon-4", { filter: 'brightness(1)' })
-            .to(".icon.icon-4", { filter: 'brightness(0.75)', duration: 2 })
-            .to(".icon.icon-4", { filter: 'brightness(1)', duration: 2})
+            .set("#title .icon.icon-4", { filter: 'brightness(1)' })
+            .to("#title .icon.icon-4", { filter: 'brightness(0.75)', duration: 2 })
+            .to("#title .icon.icon-4", { filter: 'brightness(1)', duration: 2})
             .play();
       }, []);
 
