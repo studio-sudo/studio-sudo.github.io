@@ -1,0 +1,36 @@
+#root {
+  max-width: 1600px;
+  width: 100%;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+#title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  img {
+    max-width: 600px;
+  }
+  .intro div {
+    font-size: 2em;
+  }
+  .fancy-vector {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--green-dark-color);
+    z-index: -1;
+    clip-path: path('M 400, 0 C 700 0, 700 300, 1000 300 C 1300 300, 1300 600, 1600 600 V 0 Z');
+  }
+}
