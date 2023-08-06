@@ -3,6 +3,7 @@ import './App.scss'
 import { Header } from './components/Header'
 import { StartCard } from './cards/StartCard'
 import { ServicesCard } from './cards/ServicesCard';
+import { AboutUsCard } from './cards/AboutUsCard';
 
 const debounce = (fn: (...args: unknown[]) => void) => {
   let frame: number;
@@ -32,6 +33,7 @@ function App() {
       <Header/>
       <StartCard/>
       <ServicesCard/>
+      <AboutUsCard/>
     </>
   )
 }
