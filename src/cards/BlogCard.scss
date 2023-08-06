@@ -2,20 +2,25 @@
   .blog-index {
     margin-top: 30px;
     .blog-article-card {
+      background-color: var(--white-color);
       text-align: start;
-      height: 480px;
+      min-height: 420px;
       margin: 20px;
       padding: 20px;
       border-radius: 10px;
       box-shadow: var(--shadow);
+      &.of-color {
+        color: var(--white-color);
+        .category {
+          color: var(--white-color);
+        }
+      }
       .image {
-        height: 280px;
         img {
           max-height: 100%;
           margin: auto;
         }
       }
-
       .category {
         font-size: 1em;
         color: var(--green-dark-color);
@@ -28,6 +33,10 @@
       .title {
         font-size: 1.5em;
         margin-bottom: 10px;
+        &::after {
+          margin-left: 10px;
+          content: "»";
+        }
       }
     }
   }
