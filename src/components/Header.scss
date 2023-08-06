@@ -1,0 +1,54 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: calc(100% - 128px);
+    height: 86px;
+    z-index: 10;
+    background-color: var(--milky-color);
+    padding: 0 64px;
+  
+    .fancy-vector {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--pink-light-color);
+      z-index: -1;
+      clip-path: path('M -178, -214 C 122 -214, 122 86, 422 86 H 10000 V 0 Z');
+    }
+  
+    .logo {
+      padding-top: 8px;
+      img {
+        height: 48px;
+      }
+    
+      h1 {
+        vertical-align: middle;
+        line-height: 2em;
+        margin-top: -4px;
+      }
+    }
+  
+    nav {
+      display: flex;
+      width: 50%;
+      min-width: 400px;
+      justify-content: end;
+      align-items: center;
+      gap: 64px;
+      margin-right: 64px;
+      a {
+        text-decoration: none;
+        font-size: 1.3em;
+        color: var(--graphite-color) !important;
+      }
+    }
+  }
+  
+  html:not([data-scroll='0']) header {
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.25);
+  }

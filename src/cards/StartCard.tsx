@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
-import titleLogo from '../assets/online-shopping-concept.svg';
+import titleLogo from '../assets/debugging-software-conceptv.svg';
 import './StartCard.scss';
+import { Button } from '../components/Button';
 
 export function StartCard() {
     useEffect(() => {
@@ -8,6 +9,7 @@ export function StartCard() {
             .set("#title .main-logo", { x: 1000, opacity: 0})
             .set("#title .intro h2", { opacity: 0, y: 1000})
             .set("#title .intro div", { opacity: 0, y: 1000})
+            .set("#title .intro button", { opacity: 0, y: 1000})
         
             .to("#title .main-logo", { opacity: 1, duration: 1, ease: 'power4.in' }, 0)
             .to("#title .main-logo", { x: 0, duration: 1 }, 0)
@@ -17,6 +19,9 @@ export function StartCard() {
         
             .to("#title .intro div", { opacity: 1, duration: 1, ease: 'power4.in'}, 1)
             .to("#title .intro div", { y: 0, duration: 1}, 1)
+
+            .to("#title .intro button", { opacity: 1, duration: 1, ease: 'power4.in'}, 1.5)
+            .to("#title .intro button", { y: 0, duration: 1}, 1.5)
             .play();
     
         gsap.timeline({ repeat: -1, repeatDelay: 2, delay: 2 })
@@ -46,8 +51,9 @@ export function StartCard() {
         <div id="title" className="card">
             <div className="fancy-vector"></div>
             <div className='intro'>
-                <h2>Witaj w Sudo</h2>
-                <div>Twoim partnerze w cyfrowej przyszłości</div>
+                <h2>Sudo Studio</h2>
+                <div>Innowacyjne technologie w służbie Twojego biznesu</div>
+                <Button label="Powiedz nam, czego potrzebujesz" />
             </div>
             <img className="main-logo" style={{transform: 'translateX(1000)'}} src={titleLogo}/>
             <div className="icon icon-1">

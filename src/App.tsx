@@ -1,7 +1,8 @@
 import { useLayoutEffect } from 'react';
 import './App.scss'
-import { Header } from './Header'
+import { Header } from './components/Header'
 import { StartCard } from './cards/StartCard'
+import { ServicesCard } from './cards/ServicesCard';
 
 const debounce = (fn: (...args: unknown[]) => void) => {
   let frame: number;
@@ -30,7 +31,7 @@ function App() {
     <>
       <Header/>
       <StartCard/>
-      <div className='card'></div>
+      <ServicesCard/>
     </>
   )
 }

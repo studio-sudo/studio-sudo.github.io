@@ -2,15 +2,23 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    position: relative;
     align-items: center;
     >img {
         max-width: 600px;
     }
-    .intro div {
-        font-size: 3em;
-        width: 500px;
-        text-align: left;
+    .intro {
+        margin-bottom: 128px;
+        text-align: start;
+        h2 {
+            color: var(--green-dark-color);
+        }
+        div {
+            font-size: 3.25em;
+            line-height: 1.5em;
+            width: 500px;
+            text-align: left;
+            margin-bottom: 24px;
+        }
     }
     .fancy-vector {
         position: absolute;
@@ -37,7 +45,7 @@
         &-1 {
             top: 25%;
             left: 40%;
-            background-color: var(--green-color);
+            background-color: var(--green-dark-color);
             img {
                 width: 60%;
             }
@@ -48,8 +56,8 @@
             background-color: var(--pink-color);
         }
         &-3 {
-            top: 15%;
-            left: 75%;
+            top: 8%;
+            left: 90%;
             background-color: var(--green-gray-color);
         }
         &-4 {
