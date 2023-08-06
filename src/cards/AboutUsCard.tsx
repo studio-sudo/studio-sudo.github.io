@@ -3,11 +3,8 @@ import aboutUsLogo from '../assets/about-us.svg';
 
 
 export function AboutUsCard() {
-
-
-
     return (
-        <div id="services" className="row g-0 stripe about-us">
+        <div id="about" className="row g-0 stripe about-us">
             <div className='col-lg-6 col-12 p-3'>
                 <img className='about-us-image' style={{ transform: 'translateX(1000)' }} src={aboutUsLogo} />
 

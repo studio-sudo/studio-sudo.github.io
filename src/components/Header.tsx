@@ -13,8 +13,8 @@ export function Header() {
                 <a href="/#">Start</a>
                 <a href="/#services">Usługi</a>
                 <a href="/#contact">Kontakt</a>
-                <a href="/#contact">FAQ</a>
-                <a href="/#contact">Blog</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/#blog">Blog</a>
                 <a href="/#about">O nas</a>
             </nav>
         </header>

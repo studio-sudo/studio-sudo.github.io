@@ -1,10 +1,17 @@
 button {
-    color: var(--milky-color);
-    background-color: var(--red-action-color);
     border: 0;
     padding: 16px 24px;
     border-radius: 32px;
     text-transform: uppercase;
     font-weight: 700;
     cursor: pointer;
+    transition: 0.25s;
+    &.primary {
+        color: var(--milky-color);
+        background-color: var(--red-action-color);
+    }
+    &.secondary {
+        color: var(--graphite-color);
+        background-color: var(--pink-light-color);
+    }
 }
