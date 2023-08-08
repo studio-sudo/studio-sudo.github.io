@@ -11,7 +11,7 @@ export function BlogCard() {
     }
 
     return (
-        <div className="stripe blog">
+        <div id="blog" className="stripe blog">
             <div className='row g-0'>
                 <h2 className='centered'>Our Latest Blog</h2>
                 <div className="lead-text centered">Latest News And Inspirational Stories</div>
