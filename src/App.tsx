@@ -6,6 +6,7 @@ import { AboutUsCard } from './cards/AboutUsCard';
 import { BlogCard } from './cards/BlogCard';
 import { FaqCard } from './cards/FaqCard';
 import { ContactCard } from './cards/ContactCard';
+import { LavaLamp } from './LavaLamp';
 
 const debounce = (fn: (...args: unknown[]) => void) => {
   let frame: number;
@@ -32,6 +33,7 @@ function App() {
   }, []);
   return (
     <>
+      <LavaLamp/>
       <StartCard />
       <ServicesCard />
       <FaqCard />
