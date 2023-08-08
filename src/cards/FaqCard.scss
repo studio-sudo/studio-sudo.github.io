@@ -1,34 +1,20 @@
 #faq {
-    .fancy-vector-1 {
+    .fancy-vector {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 150px;
-        height: 100%;
-        background-color: var(--pink-light-color);
-        z-index: -1;
-        clip-path: path('M 0 0 C 0 300, 150 300, 150 600 C 150 650, 150 700, 0 700 Z');
-    }
-    .fancy-vector-2 {
-        position: absolute;
-        top: 0;
+        bottom: 0;
         right: 0;
         width: 150px;
-        height: 100%;
+        height: 700px;
         background-color: var(--pink-light-color);
         z-index: -1;
         clip-path: path('M 150 700 C 150 400, 0 400, 0 100 C 0 50, 0 0, 150 0 Z');
-    }
-
-    h2, .lead-text {
-        text-align: center;
     }
 
     .row {
         height: 75%;
         .d-flex {
             height: 100%;
-            gap: 8px;
+            gap: 16px;
         }
     }
 }

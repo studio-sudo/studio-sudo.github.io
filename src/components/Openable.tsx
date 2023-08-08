@@ -12,22 +12,24 @@ export function Openable({ label, children }: IOpenable) {
     const [open, setOpen] = useState(false);
 
     useEffect(() => {
-        gsap.set(ref.current!, {height: 0});
+        gsap.set(ref.current!, {maxHeight: 0});
     }, []);
 
     const toggleAnimate = () => {
         setOpen(!open);
         if (open) {
-            gsap.to(ref.current!, { height: 0, duration: 0.5 });
+            gsap.to(ref.current!, { maxHeight: 0, duration: 0.5 });
         } else {
-            gsap.to(ref.current!, { height: 256, duration: 0.5 });
+            gsap.to(ref.current!, { maxHeight: 512, duration: 0.75 });
         }
     }
 
     return (<div className="openable">
         <Button label={label} type={open ? 'primary' : 'secondary'} onClick={toggleAnimate}/>
-        <div ref={ref}>
-            {children}
+        <div ref={ref} className="px-3">
+            <div className="my-3">
+                {children}
+            </div>
         </div>
     </div>);
 }
