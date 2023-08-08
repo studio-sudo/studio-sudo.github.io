@@ -26,7 +26,7 @@ h2 {
 }
 
 .stripe {
-  margin-bottom: 100px;
+  margin-bottom: 80px;
   h2 {
     font-size: 1.5em;
     line-height: 1.5em;
@@ -52,5 +52,23 @@ h2 {
     &.centered {
       text-align: center;
     }
+  }
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px auto;
+  border: 1px solid rgb(255, 151, 145);
+  box-shadow: 1px 1px 3px rgba(255, 151, 145, 0.3);
+  outline: none;
+  transition: 0.5s;
+  font-family: inherit;
+
+  &:focus,
+  &:active {
+    border: 1px solid rgb(255, 151, 145);
+    box-shadow: 1px 1px 12px rgba(255, 151, 145, 0.5);
   }
 }

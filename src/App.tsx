@@ -32,7 +32,7 @@ function App() {
   }, []);
   return (
     <>
-      <StartCard />
+      {/* <StartCard /> */}
       <ServicesCard />
       <FaqCard />
       <AboutUsCard />
