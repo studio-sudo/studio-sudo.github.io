@@ -3,6 +3,11 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+
+  &.start-card {
+    min-height: calc(100vh - 86px);
+  }
+
   > img {
     max-width: 600px;
   }

@@ -35,8 +35,8 @@ function App() {
       <StartCard />
       <ServicesCard />
       <FaqCard />
-      <ContactCard />
       <AboutUsCard />
+      <ContactCard />
       <BlogCard />
     </>
   )

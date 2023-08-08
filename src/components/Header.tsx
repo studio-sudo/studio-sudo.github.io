@@ -34,8 +34,8 @@ export function Header() {
                 <a href="/#" onClick={scrollToTop}>Start</a>
                 <a href="/#services" onClick={scrollTo("#services")}>Usługi</a>
                 <a href="/#faq" onClick={scrollTo("#faq")}>FAQ</a>
-                <a href="/#contact" onClick={scrollTo("#contact")}>Kontakt</a>
                 <a href="/#about" onClick={scrollTo("#about")}>O nas</a>
+                <a href="/#contact" onClick={scrollTo("#contact")}>Kontakt</a>
                 <a href="/#blog" onClick={scrollTo("#blog")}>Blog</a>
 
             </nav>

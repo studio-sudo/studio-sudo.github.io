@@ -48,7 +48,7 @@ export function StartCard() {
     }, []);
 
     return (
-        <div id="title" className="card">
+        <div id="title" className="card start-card">
             <div className='intro'>
                 <h2>Sudo Studio</h2>
                 <div>Innowacyjne technologie w służbie Twojego biznesu</div>

@@ -5,7 +5,7 @@ export function FaqCard() {
     return <div id="faq" className='stripe'>
         <h2 className='centered'>FAQ</h2>
         <div className='lead-text centered mb-5'>Pytania i odpowiedzi</div>
-        <div className='row'>
+        <div className='row g-0'>
             <div className='offset-lg-1 col-lg-5 col-md-6 col-12 px-md-5 mb-3'>
                 <div className='d-flex flex-column'>
                     <Openable label="Co możecie wykonać?">
