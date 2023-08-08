@@ -9,17 +9,6 @@ header {
   background-color: var(--milky-color);
   padding: 0 64px;
 
-  .fancy-vector {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--pink-light-color);
-    z-index: -1;
-    clip-path: path("M -178, -214 C 122 -214, 122 86, 422 86 H 10000 V 0 Z");
-  }
-
   .logo {
     padding-top: 8px;
     img {

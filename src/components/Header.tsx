@@ -26,7 +26,6 @@ export function Header() {
 
     return (
         <header>
-            <div className="fancy-vector"></div>
             <div className='logo'>
                 <img src={companyLogo} />
                 <h1>Zmieniamy Twój biznes w kod</h1>
@@ -34,10 +33,11 @@ export function Header() {
             <nav>
                 <a href="/#" onClick={scrollToTop}>Start</a>
                 <a href="/#services" onClick={scrollTo("#services")}>Usługi</a>
-                <a href="/#contact" onClick={scrollTo("#contact")}>Kontakt</a>
                 <a href="/#faq" onClick={scrollTo("#faq")}>FAQ</a>
-                <a href="/#blog" onClick={scrollTo("#blog")}>Blog</a>
+                <a href="/#contact" onClick={scrollTo("#contact")}>Kontakt</a>
                 <a href="/#about" onClick={scrollTo("#about")}>O nas</a>
+                <a href="/#blog" onClick={scrollTo("#blog")}>Blog</a>
+
             </nav>
         </header>
     )

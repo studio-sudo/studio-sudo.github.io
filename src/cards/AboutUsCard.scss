@@ -6,17 +6,6 @@
     margin-right: 5%;
   }
 
-  .fancy-vector {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: calc(50% + 64px);
-    height: 100%;
-    background-color: var(--pink-light-color);
-    z-index: -1;
-    clip-path: path('M 96 0 C 296 0, 296 64, 446 64 H 10000 V 540 H 450 C -80 540, -50 0, 96 0 Z');
-}
-
   ul.about-us-pointers {
     margin-top: 30px;
     li {

@@ -1,20 +1,9 @@
 #faq {
-    .fancy-vector {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 150px;
-        height: 700px;
-        background-color: var(--pink-light-color);
-        z-index: -1;
-        clip-path: path('M 150 700 C 150 400, 0 400, 0 100 C 0 50, 0 0, 150 0 Z');
+  .row {
+    height: 75%;
+    .d-flex {
+      height: 100%;
+      gap: 16px;
     }
-
-    .row {
-        height: 75%;
-        .d-flex {
-            height: 100%;
-            gap: 16px;
-        }
-    }
+  }
 }

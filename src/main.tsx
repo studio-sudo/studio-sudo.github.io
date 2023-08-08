@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import BlogIndex from './pages/blog/blog-index.tsx';
 import { Header } from './components/Header.tsx';
+import { Footer } from './components/Footer.tsx';
 
 const router = createBrowserRouter([
   {
@@ -25,5 +26,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Header />
     <RouterProvider router={router} />
+    <Footer />
   </React.StrictMode>,
 )
