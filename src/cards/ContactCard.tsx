@@ -1,3 +1,4 @@
+import { Button } from '../components/Button';
 import './ContactCard.scss';
 
 
@@ -25,7 +26,12 @@ export function ContactCard() {
         </div>
         <div className='row g-0'>
           <div className='col-12 px-4'>
-            <textarea placeholder='Treść' rows={12} className='form-control' />
+            <textarea placeholder='Treść' rows={10} className='form-control' />
+          </div>
+        </div>
+        <div className='row g-0'>
+          <div className='col-12 px-4 pt-4'>
+            <Button label="Wyślij" />
           </div>
         </div>
       </div>
