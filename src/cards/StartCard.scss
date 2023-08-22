@@ -1,5 +1,7 @@
 #title {
   display: flex;
+  position: relative;
+  overflow: hidden;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;

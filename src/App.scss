@@ -13,4 +13,6 @@
   height: 100%;
   background-color: var(--pink-light-color);
   z-index: -1;
+  contain: strict;
+  will-change: clip-path;
 }
