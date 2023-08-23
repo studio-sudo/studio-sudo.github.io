@@ -1,6 +1,7 @@
 import { ReactNode, useEffect, useRef, useState } from "react"
 import { Button } from "./Button";
 import './Openable.scss';
+import { isReducedMotion } from "../reduced-motion";
 
 type IOpenable = {
     label: string;
@@ -17,10 +18,18 @@ export function Openable({ label, children }: IOpenable) {
 
     const toggleAnimate = () => {
         setOpen(!open);
-        if (open) {
-            gsap.to(ref.current!, { maxHeight: 0, duration: 0.5 });
+        if (isReducedMotion) {
+            if (open) {
+                gsap.set(ref.current!, { maxHeight: 0 });
+            } else {
+                gsap.set(ref.current!, { maxHeight: 512 });
+            }
         } else {
-            gsap.to(ref.current!, { maxHeight: 512, duration: 0.75 });
+            if (open) {
+                gsap.to(ref.current!, { maxHeight: 0, duration: 0.5 });
+            } else {
+                gsap.to(ref.current!, { maxHeight: 512, duration: 0.75 });
+            }
         }
     }
 

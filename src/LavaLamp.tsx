@@ -1,12 +1,14 @@
 import { IsoLine, IsoPoint, isoLines } from 'marchingsquares';
 import { useEffect } from 'react';
+import { isReducedMotion } from './reduced-motion';
 
+const GRID_SIZE = 30;
+let cell_size = Math.ceil(document.body.clientWidth/(GRID_SIZE - 1));
 function pointToCommand(p: IsoPoint, index: number): string {
-    const size = document.body.clientWidth/GRID_SIZE + 1;
     if (index === 0) {
-        return `M ${p[0]*size} ${p[1]*size}`;
+        return `M ${p[0]*cell_size} ${p[1]*cell_size}`;
     } else {
-        return `L ${p[0]*size} ${p[1]*size}`;
+        return `L ${p[0]*cell_size} ${p[1]*cell_size}`;
     }
 }
 
@@ -36,11 +38,19 @@ function dual(line: IsoLine): IsoLine {
     return result;
 }
 
-const GRID_SIZE = 40;
 
 export function LavaLamp() {
         
     useEffect(() => {
+        const vector = document.querySelector<HTMLDivElement>('#lava-lamp')!;
+        if (isReducedMotion) {
+            const reducedPath = [];
+            for (let i = 0; i < 1000; i++) {
+                reducedPath.push(`M 12 ${i*200} H 24 V ${i*200+100} H 12 Z`);
+            }
+            vector.style.clipPath = `path('${reducedPath.join(' ')}')`;
+            return;
+        }
 
         const line = [...Array(GRID_SIZE).keys()].map(() => 0);
 
@@ -55,52 +65,56 @@ export function LavaLamp() {
             { x: 12, y: 0, r: 20, dy: 0 },
             { x: 22, y: 0, r: 20, dy: 0 },
             { x: 32, y: 0, r: 20, dy: 0 },
-            { x: 42, y: 0, r: 20, dy: 0 }
+            //{ x: 42, y: 0, r: 20, dy: 0 }
         ];
 
-        for (let i = 0; i < 20; i++) {
+        for (let i = 0; i < GRID_SIZE/2; i++) {
             blobs.push({
                 x: Math.trunc(Math.random() * data[0].length),
                 y: Math.trunc(Math.random() * data.length),
-                r: 3 + Math.trunc(Math.random() * 17),
+                r: GRID_SIZE/15 + Math.trunc(Math.random() * GRID_SIZE/3),
                 dy: 0.5 + Math.random() * 1.5,
             })
         }
 
-        const vector = document.querySelector<HTMLDivElement>('#lava-lamp')!;
 
         const setter = (data: number[][]) => {
             let lines = isoLines(data, 0);
             lines = lines.map(line => smooth(line));
 
-            const path = lines
-                .map(line => line.map(pointToCommand).join(' '))
-                .join(' ');
-            vector.style.clipPath = `path('${path}')`;
+            cell_size = Math.ceil(document.body.clientWidth/(GRID_SIZE - 1));
+            const path = lines.flatMap(line => line.map(pointToCommand));
+            vector.style.clipPath = `path('`.concat(...path, `')`);
         }
         
         setter(data);
 
         let lastTimestamp: DOMHighResTimeStamp = 0;
+        let sec = false;
         const animator = (timestamp: DOMHighResTimeStamp) => {
             const delta = (timestamp - lastTimestamp) / 1000;
             lastTimestamp = timestamp;
-            if (delta <= 0) return;
-
+            sec = !sec;
+            if (delta <= 0 || sec) {
+                requestAnimationFrame(animator);
+                return;
+            }
             blobs.forEach(blob => {
                 blob.y += blob.dy * delta;
                 if (blob.y - blob.r > data.length) {
                     blob.y = -blob.r;
                 }
             });
-
-            data.forEach((line, y) => line.forEach((_, x) => {
+            const lfe = (y: number, x: number) => {
                 let result = 1;
                 blobs.forEach(blob => {
                     result -= blob.r / ((blob.x-x) * (blob.x-x) + (blob.y-y) * (blob.y-y));
                 });
                 data[y][x] = result;
-            }));
+            };
+            const dfe = (line: number[], y: number) => line.forEach((_, x) => lfe(y, x));
+
+            data.forEach(dfe);
 
             setter(data);
             requestAnimationFrame(animator);

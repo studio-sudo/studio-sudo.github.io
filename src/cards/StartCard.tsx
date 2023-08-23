@@ -2,9 +2,11 @@ import { useEffect } from 'react';
 import titleLogo from '../assets/debugging-software-conceptv.svg';
 import './StartCard.scss';
 import { Button } from '../components/Button';
+import { isReducedMotion } from '../reduced-motion';
 
 export function StartCard() {
     useEffect(() => {
+        if (isReducedMotion) return;
         gsap.timeline()
             .set("#title .main-logo", { x: 1000, opacity: 0 })
             .set("#title .intro h2", { opacity: 0, y: 1000 })
