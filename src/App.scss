@@ -11,7 +11,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--pink-light-color);
+  background: linear-gradient(var(--pink-light-color), var(--pink-second-color));
   z-index: -1;
   contain: strict;
   will-change: clip-path;

@@ -1,3 +1,6 @@
+@import "bootstrap/scss/bootstrap-utilities";
+
+
 #title {
   display: flex;
   position: relative;
@@ -10,8 +13,11 @@
     min-height: calc(100vh - 86px);
   }
 
-  > img {
+  .main-logo {
     max-width: 600px;
+    @include media-breakpoint-down(xl) {
+      display: none;
+    }
   }
   .intro {
     margin-bottom: 128px;
@@ -26,6 +32,14 @@
       text-align: left;
       margin-bottom: 24px;
     }
+
+    @include media-breakpoint-down(lg) {
+      margin-left: 32px;
+      div {
+        font-size: 2.25em;
+        line-height: 1.5em;
+      }
+    }
   }
 
   .icon {
@@ -36,6 +50,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition-duration: 1s;
+    transition-property: top left;
+    transition-timing-function: ease;
     img {
       width: 70%;
     }
@@ -71,6 +88,24 @@
       border-radius: 0;
       -webkit-mask: url("/icons/money-atom.svg") no-repeat center;
       mask: url("/icons/money-atom.svg") no-repeat center;
+    }
+    @include media-breakpoint-down(xl) {
+      &-1 {
+        top: 10%;
+      }
+      &-2 {
+        top: 85%;
+      }
+      &-3 {
+        left: 70%;
+      }
+      &-4 {
+        top: 5%;
+      }
+      &-5 {
+        top: 75%;
+        left: 80%;
+      }
     }
   }
 }
