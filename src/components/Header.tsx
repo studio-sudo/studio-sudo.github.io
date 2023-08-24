@@ -30,6 +30,8 @@ export function Header() {
                 <img src={companyLogo} />
                 <h1>Zmieniamy Twój biznes w kod</h1>
             </div>
+            <input id="nav-box" type="checkbox"/>
+            <label htmlFor="nav-box"><hr/><hr/><hr/></label>
             <nav>
                 <a href="/#" onClick={scrollToTop}>Start</a>
                 <a href="/#services" onClick={scrollTo("#services")}>Usługi</a>
@@ -37,7 +39,6 @@ export function Header() {
                 <a href="/#about" onClick={scrollTo("#about")}>O nas</a>
                 <a href="/#contact" onClick={scrollTo("#contact")}>Kontakt</a>
                 <a href="/#blog" onClick={scrollTo("#blog")}>Blog</a>
-
             </nav>
         </header>
     )

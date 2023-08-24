@@ -1,3 +1,5 @@
+@import "bootstrap/scss/bootstrap-utilities";
+
 header {
   display: flex;
   justify-content: space-between;
@@ -13,6 +15,7 @@ header {
     padding-top: 8px;
     img {
       height: 48px;
+      flex-shrink: 0;
     }
 
     h1 {
@@ -24,8 +27,6 @@ header {
 
   nav {
     display: flex;
-    width: 50%;
-    min-width: 400px;
     justify-content: end;
     align-items: center;
     gap: 64px;
@@ -34,6 +35,59 @@ header {
       text-decoration: none;
       font-size: 1.3em;
       color: var(--graphite-color) !important;
+    }
+  }
+
+  input, label {
+    display: none;
+  }
+
+  @include media-breakpoint-down(xl) {
+    width: calc(100% - 32px);
+    padding: 0 16px;
+  }
+  @include media-breakpoint-down(lg) {
+    nav {
+      gap: 32px;
+      margin-right: 0;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    nav {
+      display: flex;
+      position: absolute;
+      justify-content: center;
+      flex-direction: column;
+      top: -380px;
+      left: 0;
+      right: 0;
+      transition: top 1s ease-in-out;
+      background-color: var(--pink-light-color);
+      padding: 16px;
+      box-shadow: var(--shadow);
+      z-index: -1;
+    }
+    label {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: center;
+      background-color: var(--milky-color);
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      align-self: center;
+      cursor: pointer;
+      gap: 8px;
+      hr {
+        margin: 0 8px;
+      }
+    }
+    input:checked~nav {
+      top: 86px;
+    }
+    input:checked~label {
+      background-color: var(--pink-color);
     }
   }
 }
