@@ -32,6 +32,9 @@ jobs:
       - name: Build
         run: yarn build
 
+      - name: Setup redirects
+        run: cp docs/index.html docs/404.html
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
