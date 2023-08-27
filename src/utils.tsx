@@ -7,21 +7,21 @@ export const getMarkdownName = (path: string): string => {
 
 export const getMarkdownPage = (path: string, loader: () => Promise<unknown>, Wrapper?: React.FC<{ name: string, children: React.ReactNode; }>): RouteObject => {
     const Component = React.lazy(() => loader().then(x => ({ default: (x as { ReactComponent: React.FC }).ReactComponent})));
-    path = getMarkdownName(path);
+    const slug = getMarkdownName(path);
     const Suspended = <Suspense fallback={<div>Loading...</div>}>
         <Component/>
     </Suspense>;
 
     if (Wrapper) {
         return {
-            path,
-            element: <Wrapper name={path}>
+            path: slug,
+            element: <Wrapper name={slug}>
                 {Suspended}
             </Wrapper>
         }
     } else {
         return ({
-            path,
+            path: slug,
             element: Suspended
         });
     }
