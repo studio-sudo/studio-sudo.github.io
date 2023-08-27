@@ -6,19 +6,16 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import BlogIndex from './pages/blog/blog-index.tsx';
 import { Header } from './components/Header.tsx';
 import { Footer } from './components/Footer.tsx';
+import { getBlogPages } from './pages/blog/index.tsx';
 
 const router = createBrowserRouter([
-  {
-    path: "/blog",
-    element: <BlogIndex />,
-  },
+  getBlogPages(),
   {
     path: "/",
     element: <App />,
-  },
+  }
 ]);
 
 
