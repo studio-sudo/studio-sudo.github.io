@@ -2,28 +2,28 @@
     font-family: 'Lato';
     font-style: normal;
     font-weight: 400;
-    src: url('/Lato/Lato-Regular.woff2') format('woff2'), url('/Lato/Lato-Regular.ttf') format('truetype');
+    src: url('/Lato/Lato-Regular.woff2') format('woff2'), url('/Lato/Lato-Regular.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Lato';
     font-style: italic;
     font-weight: 400;
-    src: url('/Lato/Lato-Italic.woff2') format('woff2'), url('/Lato/Lato-Italic.ttf') format('truetype');
+    src: url('/Lato/Lato-Italic.woff2') format('woff2'), url('/Lato/Lato-Italic.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
-    src: url('/Lato/Lato-Bold.woff2') format('woff2'), url('/Lato/Lato-Bold.ttf') format('truetype');
+    src: url('/Lato/Lato-Bold.woff2') format('woff2'), url('/Lato/Lato-Bold.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Lato';
     font-style: italic;
     font-weight: 700;
-    src: url('/Lato/Lato-BoldItalic.woff2') format('woff2'), url('/Lato/Lato-BoldItalic.ttf') format('truetype');
+    src: url('/Lato/Lato-BoldItalic.woff2') format('woff2'), url('/Lato/Lato-BoldItalic.woff') format('woff');
 }
 
 :root {
