@@ -1,6 +1,6 @@
 import { IsoLine, IsoPoint, isoLines } from 'marchingsquares';
 import { useEffect } from 'react';
-import { isReducedMotion } from './reduced-motion';
+import { isReducedMotion } from '../../reduced-motion';
 
 const GRID_SIZE = 30;
 let cell_size = Math.ceil(document.body.clientWidth/(GRID_SIZE - 1));

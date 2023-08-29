@@ -1,5 +1,5 @@
 import './AboutUsCard.scss';
-import aboutUsLogo from '../assets/about-us.svg';
+import aboutUsLogo from '../../../assets/about-us.svg';
 
 
 export function AboutUsCard() {

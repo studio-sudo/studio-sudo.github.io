@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
-import titleLogo from '../assets/debugging-software-conceptv.svg';
+import titleLogo from '../../../assets/debugging-software-conceptv.svg';
 import './StartCard.scss';
-import { Button } from '../components/Button';
-import { isReducedMotion } from '../reduced-motion';
+import { Button } from '../../../components/Button';
+import { isReducedMotion } from '../../../reduced-motion';
 
 export function StartCard() {
     useEffect(() => {

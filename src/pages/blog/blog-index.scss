@@ -1,0 +1,22 @@
+.blogIndex {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 16px;
+    a {
+        box-shadow: 2px 2px 4px black;
+        border-radius: 8px;
+        padding: 16px;
+        background-color: var(--pink-light-color);
+        color: var(--graphite-color);
+        text-decoration: none;
+
+        h2 {
+            margin-top: 0;
+        }
+
+        p {
+            text-align: left;
+        }
+    }
+}

@@ -1,6 +1,6 @@
 import './BlogCard.scss';
-import aboutUsLogo from '../assets/about-us.svg';
-import debuggingLogo from '../assets/debugging-software-conceptv.svg';
+import aboutUsLogo from '../../../assets/about-us.svg';
+import debuggingLogo from '../../../assets/debugging-software-conceptv.svg';
 
 
 export function BlogCard() {

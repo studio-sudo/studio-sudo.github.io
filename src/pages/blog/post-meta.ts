@@ -8,6 +8,12 @@ type PostAttributes = {
     description: string
 }
 
+export type BlogPostsInfo = {
+    slug: string;
+    title: string;
+    description: string;
+}[];
+
 export default async () => {
     const entries = fglob.globSync('./posts/*.md', {
         cwd: __dirname,
@@ -15,7 +21,7 @@ export default async () => {
     });
     const files = entries.map(e => ([e, readFileSync(e, { encoding: 'utf-8' })] as [string, string]));
     const postImports = files.map((f) => ([f[0], fm(f[1]).attributes] as [string, PostAttributes]))
-    const posts = postImports
+    const posts: BlogPostsInfo = postImports
         .map(([path, data]) => ({
             slug: getMarkdownName(path),
             title: data.title,

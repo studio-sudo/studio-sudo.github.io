@@ -1,4 +1,4 @@
-import { Openable } from '../components/Openable';
+import { Openable } from '../../../components/Openable';
 import './FaqCard.scss';
 
 export function FaqCard() {

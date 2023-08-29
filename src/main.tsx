@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
+import App from './pages/start/App.tsx'
 import './styles/index.scss'
 import {
   createBrowserRouter,
@@ -9,15 +9,21 @@ import {
 import { Header } from './components/Header.tsx';
 import { Footer } from './components/Footer.tsx';
 import { getBlogPages } from './pages/blog/index.tsx';
+import { Wrapper } from './Wrapper.tsx';
 
 const router = createBrowserRouter([
-  getBlogPages(),
   {
     path: "/",
-    element: <App />,
+    element: <Wrapper/>,
+    children: [
+      getBlogPages(),
+      {
+        path: "/",
+        element: <App />,
+      }
+    ]
   }
 ]);
-
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
