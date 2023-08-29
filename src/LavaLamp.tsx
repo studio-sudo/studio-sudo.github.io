@@ -5,10 +5,12 @@ import { isReducedMotion } from './reduced-motion';
 const GRID_SIZE = 30;
 let cell_size = Math.ceil(document.body.clientWidth/(GRID_SIZE - 1));
 function pointToCommand(p: IsoPoint, index: number): string {
+    const x = (p[0] * cell_size);
+    const y = (p[1] * cell_size);
     if (index === 0) {
-        return `M ${p[0]*cell_size} ${p[1]*cell_size}`;
+        return `M ${x} ${y}`;
     } else {
-        return `L ${p[0]*cell_size} ${p[1]*cell_size}`;
+        return ` ${x} ${y}`;
     }
 }
 
@@ -42,13 +44,19 @@ function dual(line: IsoLine): IsoLine {
 export function LavaLamp() {
         
     useEffect(() => {
-        const vector = document.querySelector<HTMLDivElement>('#lava-lamp')!;
+        const lavaLampRule = Array.from(document.styleSheets)
+            .flatMap(s => s.cssRules)
+            .flatMap(l => Array.from(l))
+            .filter((rule): rule is CSSStyleRule => rule instanceof CSSStyleRule)
+            .find(rule => rule.selectorText === "#lava-lamp");
+        if (!lavaLampRule) return;
+
         if (isReducedMotion) {
             const reducedPath = [];
             for (let i = 0; i < 1000; i++) {
                 reducedPath.push(`M 12 ${i*200} H 24 V ${i*200+100} H 12 Z`);
             }
-            vector.style.clipPath = `path('${reducedPath.join(' ')}')`;
+            lavaLampRule.style.clipPath = `path('${reducedPath.join(' ')}')`;
             return;
         }
 
@@ -84,7 +92,7 @@ export function LavaLamp() {
 
             cell_size = Math.ceil(document.body.clientWidth/(GRID_SIZE - 1));
             const path = lines.flatMap(line => line.map(pointToCommand));
-            vector.style.clipPath = `path('`.concat(...path, `')`);
+            lavaLampRule.style.clipPath = `path('`.concat(...path, `')`);
         }
         
         setter(data);
