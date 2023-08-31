@@ -3,6 +3,7 @@ title: Aplikacja webowa czy desktopowa - Co wybrać?
 description: W dzisiejszych czasach, wraz z dynamicznym rozwojem technologii, wybór pomiędzy aplikacją webową a desktopową może stwarzać pewne dylematy dla twórców oraz użytkowników. Oba rodzaje aplikacji mają swoje własne zalety i wady, dlatego warto dokładnie przyjrzeć się temu wyborowi.
 createdBy: Michał Isalski
 createdOn: 2023-08-23
+isRecommended: true
 ---
 
 ## Aplikacje desktopowe: Kiedy wydajność i dostęp do zasobów mają znaczenie

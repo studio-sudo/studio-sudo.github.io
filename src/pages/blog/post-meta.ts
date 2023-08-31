@@ -7,7 +7,8 @@ type PostAttributes = {
     title: string,
     description: string,
     createdBy: string,
-    createdOn: Date
+    createdOn: Date,
+    isRecommended: boolean
 }
 
 export type BlogPostsInfo = {
@@ -16,6 +17,7 @@ export type BlogPostsInfo = {
     description: string;
     createdBy: string;
     createdOn: Date;
+    isRecommended: boolean;
 }[];
 
 export default async () => {
@@ -31,7 +33,8 @@ export default async () => {
             title: data.title,
             description: data.description,
             createdBy: data.createdBy,
-            createdOn: data.createdOn
+            createdOn: data.createdOn,
+            isRecommended: data.isRecommended
         }));
     return {
       data: posts,

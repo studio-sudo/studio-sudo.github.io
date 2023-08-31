@@ -3,6 +3,7 @@ title: SPA - Wady i Zalety
 description: Współczesne technologie internetowe ewoluują w zastraszającym tempie, a wraz z nimi rośnie liczba narzędzi i podejść wykorzystywanych do tworzenia stron internetowych i aplikacji. Jednym z takich podejść jest architektura SPA, czyli Single Page Application (Aplikacja jednostronicowa). Choć zyskała ona ogromną popularność w ostatnich latach, nie jest pozbawiona ani wad, ani zalet. W tym artykule przyjrzymy się bliżej SPA, zrozumiemy, dlaczego jest wykorzystywane, oraz przeanalizujemy zarówno jego zalety, jak i wady.
 createdBy: Michał Isalski
 createdOn: 2023-08-23
+isRecommended: false
 ---
 
 ## Czym jest SPA?
