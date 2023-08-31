@@ -8,21 +8,20 @@
   gap: 30px;
 
   .articleItem {
-    border-bottom: 1px solid var(--pink-second-color);
-    padding-bottom: 20px;
-    margin-bottom: 10px;
-
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
     .articleTitle {
       &::after {
+        margin-left: 10px;
         content: "»";
       }
-
-      a {
-        margin-right: 10px;
-        color: inherit;
-        text-decoration: none;
-      }
     }
+  }
+
+  .articleItem + .articleItem {
+    border-top: 1px solid var(--pink-second-color);
   }
 
   .leftContainer {
@@ -33,6 +32,11 @@
     border-radius: 10px;
     padding: 10px 20px;
     box-shadow: var(--shadow);
+
+    .articleItem {
+      padding-bottom: 20px;
+      margin-bottom: 10px;
+    }
   }
   .rightContainer {
     display: flex;
