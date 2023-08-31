@@ -16,9 +16,11 @@ export function Header({ isIndex }: { isIndex: boolean }) {
         });
     }
 
-    const scrollToTop = (ev: React.MouseEvent) => {
-        ev.preventDefault();
-        ev.stopPropagation();
+    const scrollToTop = (prevent: boolean) => (ev: React.MouseEvent) => {
+        if (prevent) {
+            ev.preventDefault();
+            ev.stopPropagation();
+        }
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
@@ -27,20 +29,24 @@ export function Header({ isIndex }: { isIndex: boolean }) {
 
     return (
         <header>
-            <div className='logo'>
+            <NavLink className='logo' to='/' onClick={scrollToTop(false)}>
                 <img src={companyLogo} />
                 <h1>Zmieniamy Twój biznes w kod</h1>
-            </div>
-            <input id="nav-box" type="checkbox"/>
-            <label htmlFor="nav-box"><hr/><hr/><hr/></label>
-            <nav>
-                <a href="/#" onClick={scrollToTop}>Start</a>
-                <a href="/#services" onClick={scrollTo("#services")}>Usługi</a>
-                <a href="/#faq" onClick={scrollTo("#faq")}>FAQ</a>
-                <a href="/#about" onClick={scrollTo("#about")}>O nas</a>
-                <a href="/#contact" onClick={scrollTo("#contact")}>Kontakt</a>
-                <NavLink to={'/blog'}>Blog</NavLink>
-            </nav>
+            </NavLink>
+            { isIndex && (
+            <>
+                <input id="nav-box" type="checkbox"/>
+                <label htmlFor="nav-box"><hr/><hr/><hr/></label>
+                <nav>
+                    <NavLink to="/#" onClick={scrollToTop(true)}>Start</NavLink>
+                    <a href="/#services" onClick={scrollTo("#services")}>Usługi</a>
+                    <a href="/#faq" onClick={scrollTo("#faq")}>FAQ</a>
+                    <a href="/#about" onClick={scrollTo("#about")}>O nas</a>
+                    <a href="/#contact" onClick={scrollTo("#contact")}>Kontakt</a>
+                    <NavLink to='/blog'>Blog</NavLink>
+                </nav>
+            </>
+            )}
         </header>
     )
 }

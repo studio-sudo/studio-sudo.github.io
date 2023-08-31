@@ -9,6 +9,7 @@ function BlogIndex() {
     <div className='blogIndex'>
       {blogPosts.map(post => (<Link key={post.slug} to={post.slug}>
         <h2>{post.title}</h2>
+        <div>Przez: {post.createdBy} - {post.createdOn.toLocaleDateString()}</div>
         <p>{post.description}</p>
       </Link>))}
     </div>

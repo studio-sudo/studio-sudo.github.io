@@ -7,7 +7,7 @@ type PostAttributes = {
     title: string,
     description: string,
     createdBy: string,
-    createdOn: string
+    createdOn: Date
 }
 
 export type BlogPostsInfo = {
@@ -15,7 +15,7 @@ export type BlogPostsInfo = {
     title: string;
     description: string;
     createdBy: string;
-    createdOn: string;
+    createdOn: Date;
 }[];
 
 export default async () => {
