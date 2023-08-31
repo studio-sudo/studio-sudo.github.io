@@ -1,6 +1,9 @@
 ---
 title: Czy Google indeksuje treść dostarczaną przez JavaScript?
 description: W dzisiejszym dynamicznym świecie internetu, JavaScript stał się jednym z kluczowych narzędzi, umożliwiającym tworzenie interaktywnych i zaawansowanych stron internetowych. Niemniej jednak, istnieją pewne wyzwania związane z tym językiem programowania, zwłaszcza jeśli chodzi o indeksowanie treści przez wyszukiwarki internetowe, takie jak Google. W tym artykule przyjrzymy się temu, czy Google indeksuje treść dostarczaną przez JavaScript, a także poznamy znaczenie indeksowania dla biznesu.
+createdBy: Michał Isalski
+createdOn: 2023-08-23
+isRecommended: true
 ---
 
 ## Czym jest JavaScript i do czego służy?

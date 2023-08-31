@@ -99,7 +99,9 @@ export function LavaLamp() {
 
         let lastTimestamp: DOMHighResTimeStamp = 0;
         let sec = false;
+        let stopAnimation = false;
         const animator = (timestamp: DOMHighResTimeStamp) => {
+            if (stopAnimation) return;
             const delta = (timestamp - lastTimestamp) / 1000;
             lastTimestamp = timestamp;
             sec = !sec;
@@ -128,6 +130,8 @@ export function LavaLamp() {
             requestAnimationFrame(animator);
         };
         requestAnimationFrame(animator);
+
+        return () => { stopAnimation = true; };
     });
 
     return <div id="lava-lamp"></div>
