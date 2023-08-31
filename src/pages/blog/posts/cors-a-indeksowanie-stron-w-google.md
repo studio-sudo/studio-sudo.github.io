@@ -1,6 +1,8 @@
 ---
 title: CORS a indeksowanie stron w Google - Kluczowa rola poprawnej konfiguracji
 description: Współczesny świat zdominowany przez technologię i internet wymusza na przedsiębiorcach coraz to nowsze podejścia do promocji i zwiększania widoczności swoich usług czy produktów. W tym kontekście indeksowanie stron internetowych odgrywa fundamentalną rolę, umożliwiając wyszukiwarkom internetowym, takim jak Google, skuteczne odnajdywanie i prezentowanie treści użytkownikom. Jednakże istnieje wiele czynników, które mogą wpłynąć na efektywność procesu indeksowania. Jednym z kluczowych aspektów, który może mieć wpływ na indeksowanie, jest polityka CORS (Cross-Origin Resource Sharing).
+createdBy: Michał Isalski
+createdOn: 2023-08-23
 ---
 
 ## Indeksowanie stron: Kluczowa rola dla biznesu

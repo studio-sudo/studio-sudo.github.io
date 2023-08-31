@@ -1,6 +1,8 @@
 ---
 title: Kluczowe aspekty indeksowania stron
 description: W dzisiejszym dynamicznym świecie internetu, obecność online jest niezwykle istotna dla każdego rodzaju biznesu. W tym kontekście, pojęcie "indeksowanie stron" odgrywa kluczową rolę w zapewnieniu widoczności i osiągalności witryn internetowych. W niniejszym artykule przyjrzymy się głębiej temu procesowi oraz jego kluczowym aspektom, ze szczególnym naciskiem na optymalizację treści pod kątem SEO.
+createdBy: Michał Isalski
+createdOn: 2023-08-23
 ---
 
 ## Indeksowanie stron – istota procesu

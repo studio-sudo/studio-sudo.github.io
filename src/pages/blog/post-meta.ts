@@ -5,13 +5,17 @@ import fm from 'front-matter';
 
 type PostAttributes = {
     title: string,
-    description: string
+    description: string,
+    createdBy: string,
+    createdOn: string
 }
 
 export type BlogPostsInfo = {
     slug: string;
     title: string;
     description: string;
+    createdBy: string;
+    createdOn: string;
 }[];
 
 export default async () => {
@@ -25,7 +29,9 @@ export default async () => {
         .map(([path, data]) => ({
             slug: getMarkdownName(path),
             title: data.title,
-            description: data.description
+            description: data.description,
+            createdBy: data.createdBy,
+            createdOn: data.createdOn
         }));
     return {
       data: posts,

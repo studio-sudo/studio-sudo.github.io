@@ -1,7 +1,8 @@
+import { NavLink } from 'react-router-dom';
 import companyLogo from '../assets/logo-light-bg.png';
 import './Header.scss';
 
-export function Header() {
+export function Header({ isIndex }: { isIndex: boolean }) {
 
     const scrollTo = (selector: string) => (ev: React.MouseEvent) => {
         const element = document.querySelector(selector);
@@ -38,7 +39,7 @@ export function Header() {
                 <a href="/#faq" onClick={scrollTo("#faq")}>FAQ</a>
                 <a href="/#about" onClick={scrollTo("#about")}>O nas</a>
                 <a href="/#contact" onClick={scrollTo("#contact")}>Kontakt</a>
-                <a href="/#blog" onClick={scrollTo("#blog")}>Blog</a>
+                <NavLink to={'/blog'}>Blog</NavLink>
             </nav>
         </header>
     )

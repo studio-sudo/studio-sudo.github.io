@@ -6,8 +6,6 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import { Header } from './components/Header.tsx';
-import { Footer } from './components/Footer.tsx';
 import { getBlogPages } from './pages/blog/index.tsx';
 import { Wrapper } from './Wrapper.tsx';
 
@@ -27,8 +25,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Header />
     <RouterProvider router={router} />
-    <Footer />
   </React.StrictMode>,
 )
