@@ -9,7 +9,7 @@ function BlogIndex() {
     <div className='blogContainer'>
       <div className='leftContainer'>
         {blogPosts.map(post => (<div className='articleItem' key={post.slug}>
-          <h2 className='articleTitle'><a href={post.slug}>{post.title}</a></h2>
+          <h2 className='articleTitle'><a href={`/blog/${post.slug}`}>{post.title}</a></h2>
           <p>{post.description}</p>
           <a className='readMoreLink' href={post.slug}>Czytaj dalej »</a>
         </div>))}
@@ -21,7 +21,7 @@ function BlogIndex() {
         </div>
         <div className='featuredPosts'>
           {blogPosts.map(post => (<div className='articleItem' key={post.slug}>
-            <h2 className='articleTitle'><a href={post.slug}>{post.title}</a></h2>
+            <h2 className='articleTitle'><a href={`/blog/${post.slug}`}>{post.title}</a></h2>
           </div>))}
         </div>
       </div>

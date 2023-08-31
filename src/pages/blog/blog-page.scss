@@ -1,29 +1,4 @@
-.blogPage {
-    margin: 0 50px 50px 50px;
-
-    .blogPageHeader {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        margin: 1em 0 0.5em 0;
-
-        a {
-            position: absolute;
-            left: 0;
-        }
-
-        h1 {
-            font-size: 2em;
-            line-height: 2em;
-        }
-    }
-
-    h2 {
-        margin: 1em 0 0.5em 0;
-    }
-
-    p {
-        text-align: left;
-    }
+.articleTitle {
+  font-size: 2rem;
+  margin: 20px 0;
 }
