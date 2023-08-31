@@ -12,6 +12,11 @@ body {
   --scrollbar-width: calc(100vw - 100%);
 }
 
+.readMoreLink {
+  text-decoration: none;
+  color: var(--red-action-color);
+}
+
 h1 {
   font-size: 0.8em;
   line-height: 0.8em;
