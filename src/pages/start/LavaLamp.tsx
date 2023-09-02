@@ -84,7 +84,7 @@ export function LavaLamp() {
                 x: Math.trunc(Math.random() * data[0].length),
                 y: Math.trunc(Math.random() * data.length),
                 r: GRID_SIZE/15 + Math.trunc(Math.random() * GRID_SIZE/3),
-                dy: 0.5 + Math.random() * 1.5,
+                dy: 0.25 + Math.random() * 0.75,
             })
         }
 

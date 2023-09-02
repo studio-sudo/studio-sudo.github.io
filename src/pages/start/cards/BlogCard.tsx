@@ -20,7 +20,7 @@ export function BlogCard() {
             </div>
             <div className='blog-index row g-0 px-5'>
                 {posts.map(post => (
-                    <div className='col-lg-4 col-12'>
+                    <div className='col-lg-4 col-12' key={post.slug}>
                         <article className='blog-article-card of-color'>
                             <div className='creator'>{post.createdBy}</div>
                             <div className='date'>{post.createdOn.toLocaleDateString()}</div>

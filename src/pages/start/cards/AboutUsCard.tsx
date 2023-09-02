@@ -6,7 +6,7 @@ export function AboutUsCard() {
     return (
         <div id="about" className="row g-0 stripe about-us">
             <div className='col-lg-6 col-12 p-3'>
-                <img className='about-us-image' src={aboutUsLogo} loading="lazy" />
+                <img className='about-us-image' width="568" height="426" src={aboutUsLogo} alt="Mężczyzna i kobieta tworzący oprogramowanie" loading="lazy" />
             </div>
             <div className='col-lg-5 col-12 p-3'>
                 <h2>About Us</h2>
