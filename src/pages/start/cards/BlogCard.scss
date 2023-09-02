@@ -11,7 +11,7 @@
       box-shadow: var(--shadow);
       &.of-color {
         color: var(--white-color);
-        .category {
+        .creator {
           color: var(--white-color);
         }
       }
@@ -21,7 +21,7 @@
           margin: auto;
         }
       }
-      .category {
+      .creator {
         font-size: 1em;
         color: var(--green-dark-color);
         margin-bottom: 10px;
@@ -33,7 +33,9 @@
       .title {
         font-size: 1.5em;
         margin-bottom: 10px;
-        &::after {
+        color: inherit;
+        text-decoration: none;
+        div::after {
           margin-left: 10px;
           content: "»";
         }

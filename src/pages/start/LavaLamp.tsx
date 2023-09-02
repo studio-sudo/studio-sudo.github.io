@@ -73,7 +73,10 @@ export function LavaLamp() {
             { x: 12, y: 0, r: 20, dy: 0 },
             { x: 22, y: 0, r: 20, dy: 0 },
             { x: 32, y: 0, r: 20, dy: 0 },
-            //{ x: 42, y: 0, r: 20, dy: 0 }
+            { x:  2, y: data.length - 7, r: 20, dy: 0 },
+            { x: 12, y: data.length - 7, r: 20, dy: 0 },
+            { x: 22, y: data.length - 7, r: 20, dy: 0 },
+            { x: 32, y: data.length - 7, r: 20, dy: 0 }
         ];
 
         for (let i = 0; i < GRID_SIZE/2; i++) {
