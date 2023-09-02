@@ -8,7 +8,7 @@ export function Footer() {
         <div className='row g-0 p-5'>
             <div className="col-12 col-md-4 footerModule">
                 <NavLink className='logoFooter' to='/'>
-                    <img className='logoFooter' src={companyLogo} />
+                    <img className='logoFooter' width="150" height="45" alt="Logo firmy" src={companyLogo} />
                 </NavLink>
                 <p>
 
@@ -20,7 +20,7 @@ export function Footer() {
                 <div className="footerHeading">
                     Nasza oferta
                 </div>
-                <p>
+                <div>
                     <ul>
                         <li>
                             Lorem ipsum dolor sit amet
@@ -38,7 +38,7 @@ export function Footer() {
                             Cras bibendum sapien
                         </li>
                     </ul>
-                </p>
+                </div>
             </div>
             <div className="col-12 col-md-4 footerModule">
                 <div className="footerHeading">
