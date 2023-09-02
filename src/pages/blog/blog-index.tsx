@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import './blog-index.scss'
 import type { BlogPostsInfo } from './post-meta';
 
