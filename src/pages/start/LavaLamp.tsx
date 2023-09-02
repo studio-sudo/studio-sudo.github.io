@@ -2,7 +2,11 @@ import { IsoLine, IsoPoint, isoLines } from 'marchingsquares';
 import { useEffect } from 'react';
 import { isReducedMotion } from '../../reduced-motion';
 
+const SPEED_MOD = 0.25;
+const SIZE_MOD = 0.35;
+const COUNT_MOD = 2;
 const GRID_SIZE = 30;
+
 let cell_size = Math.ceil(document.body.clientWidth/(GRID_SIZE - 1));
 function pointToCommand(p: IsoPoint, index: number): string {
     const x = (p[0] * cell_size);
@@ -14,8 +18,10 @@ function pointToCommand(p: IsoPoint, index: number): string {
     }
 }
 
-function smooth(line: IsoLine): IsoLine {
-    line = dual(refine(line));
+function smooth(line: IsoLine, rounds: number): IsoLine {
+    for(let i = 0; i < rounds; i++) {
+        line = dual(refine(line));
+    }
     return line;
 }
 
@@ -79,26 +85,26 @@ export function LavaLamp() {
             { x: 32, y: data.length - 7, r: 20, dy: 0 }
         ];
 
-        for (let i = 0; i < GRID_SIZE/2; i++) {
+        for (let i = 0; i < GRID_SIZE * COUNT_MOD; i++) {
             blobs.push({
                 x: Math.trunc(Math.random() * data[0].length),
                 y: Math.trunc(Math.random() * data.length),
-                r: GRID_SIZE/15 + Math.trunc(Math.random() * GRID_SIZE/3),
-                dy: 0.25 + Math.random() * 0.75,
+                r: SIZE_MOD * (GRID_SIZE/15 + Math.trunc(Math.random() * GRID_SIZE/3)),
+                dy: SPEED_MOD * (0.5 + Math.random() * 1.5),
             })
         }
 
 
-        const setter = (data: number[][]) => {
+        const setter = (data: number[][], smooths: number) => {
             let lines = isoLines(data, 0);
-            lines = lines.map(line => smooth(line));
+            lines = lines.map(line => smooth(line, smooths));
 
             cell_size = Math.ceil(document.body.clientWidth/(GRID_SIZE - 1));
             const path = lines.flatMap(line => line.map(pointToCommand));
             lavaLampRule.style.clipPath = `path('`.concat(...path, `')`);
         }
         
-        setter(data);
+        setter(data, 2);
 
         let lastTimestamp: DOMHighResTimeStamp = 0;
         let sec = false;
@@ -129,7 +135,7 @@ export function LavaLamp() {
 
             data.forEach(dfe);
 
-            setter(data);
+            setter(data, delta > 0.03 ? 1 : 2);
             requestAnimationFrame(animator);
         };
         requestAnimationFrame(animator);
