@@ -56,15 +56,15 @@ export function StartCard() {
                 <div>Innowacyjne technologie w służbie Twojego biznesu</div>
                 <Button label="Powiedz nam, czego potrzebujesz" />
             </div>
-            <img className="main-logo" style={{ transform: 'translateX(1000)' }} src={titleLogo} />
+            <img className="main-logo" width="600" height="450" style={{ transform: 'translateX(1000)' }} alt="Mężczyzna trzymający wielki klucz płaski" src={titleLogo} />
             <div className="icon icon-1">
-                <img src="/icons/chart.svg" />
+                <img width="38" height="38" src="/icons/chart.svg" alt="Ikona wykresu" />
             </div>
             <div className="icon icon-2">
-                <img src="/icons/rocket.svg" />
+                <img width="38" height="38" src="/icons/rocket.svg" alt="Ikona rakiety" />
             </div>
             <div className="icon icon-3">
-                <img src="/icons/tools.svg" />
+                <img width="38" height="38" src="/icons/tools.svg" alt="Ikona narzędzi" />
             </div>
             <div className="icon icon-4"></div>
             <div className="icon icon-5"></div>

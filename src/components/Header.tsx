@@ -30,7 +30,7 @@ export function Header({ isIndex }: { isIndex: boolean }) {
     return (
         <header>
             <NavLink className='logo' to='/' onClick={scrollToTop(false)}>
-                <img src={companyLogo} />
+                <img src={companyLogo} width="160" height="48" alt="Logo firmy" />
                 <h1>Zmieniamy Twój biznes w kod</h1>
             </NavLink>
             { isIndex && (
