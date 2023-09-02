@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
 import './blog-index.scss'
 import type { BlogPostsInfo } from './post-meta';
 import { FeaturedPosts } from './featured-posts';
+import { Link } from 'react-router-dom';
 
 const blogPosts = import.meta.compileTime<BlogPostsInfo>("./post-meta.ts")
 
@@ -17,7 +17,7 @@ function BlogIndex() {
           </article>
         ))}
       </section>
-      <FeaturedPosts root='./'/>
+      <FeaturedPosts root='./' />
     </div>
   )
 }

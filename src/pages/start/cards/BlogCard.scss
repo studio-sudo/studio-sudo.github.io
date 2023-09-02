@@ -4,15 +4,15 @@
     .blog-article-card {
       background-color: var(--white-color);
       text-align: start;
-      min-height: 420px;
+      min-height: 180px;
       margin: 20px;
       padding: 20px;
       border-radius: 10px;
       box-shadow: var(--shadow);
       &.of-color {
-        color: var(--white-color);
+        // color: var(--white-color);
         .creator {
-          color: var(--white-color);
+          // color: var(--white-color);
         }
       }
       .image {

@@ -2,4 +2,17 @@ footer {
   min-height: 200px;
   position: relative;
   background-color: var(--pink-second-color);
+
+  .logoFooter {
+    width: 150px;
+  }
+
+  .footerModule {
+    text-align: left;
+    padding: 0 40px;
+
+    .footerHeading {
+      font-size: 1.4rem;
+    }
+  }
 }
