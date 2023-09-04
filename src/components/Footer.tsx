@@ -11,9 +11,8 @@ export function Footer() {
                     <img className='logoFooter' width="150" height="45" alt="Logo firmy" src={companyLogo} />
                 </NavLink>
                 <p>
-
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec odio consectetur felis ullamcorper blandit.
-                    Cras bibendum sapien ac eros rhoncus lobortis. In a tincidunt ipsum, id tincidunt velit.
+                    Specjalizujemy się w tworzeniu rozwiązań informatycznych specjalnie dostosowanych do Twojego biznesu.
+                    Niech nasze usługi wprowadzą Twój biznes w erę cyfryzacji!
                 </p>
             </div>
             <div className="col-12 col-md-4 footerModule">
@@ -23,19 +22,16 @@ export function Footer() {
                 <div>
                     <ul>
                         <li>
-                            Lorem ipsum dolor sit amet
+                            Strony Internetowe
                         </li>
                         <li>
-                            Consectetur adipiscing elit
+                            Aplikacje Webowe
                         </li>
                         <li>
-                            Maecenas nec odio consectetur
+                            Sztuczna Inteligencja (AI)
                         </li>
                         <li>
-                            Felis ullamcorper blandit
-                        </li>
-                        <li>
-                            Cras bibendum sapien
+                            Konsulting Programistyczny
                         </li>
                     </ul>
                 </div>
@@ -46,13 +42,10 @@ export function Footer() {
                 </div>
                 <p className='mb-3'>
                     Sudo Studio<br />
-                    Michał Isalski
+                    Michał Isalski IT
                 </p>
-                +48 700 880 000<br />
-                NIP 1234 657 875<br />
-                misiaczek@gmail.com<br />
-
-
+                NIP 6443 573 778<br />
+                isalski.michal[at]gmail.com<br />
             </div>
         </div>
     </footer>;
