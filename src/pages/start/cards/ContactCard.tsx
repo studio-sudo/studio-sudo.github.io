@@ -8,7 +8,7 @@ export function ContactCard() {
       <div className='row g-0'>
         <h2 className='centered'>Kontakt</h2>
         <div className="lead-text centered">Skontaktuj się z nami</div>
-        <div className='content-text centered'>Jeśli masz jakieś pytania bla bla bla bla bla skontaktuj się z nami. Odpowiemy najszybciej jak to możliwe.</div>
+        <div className='content-text centered'>Jeśli masz jakieś pytania odnośnie wykonania projektu, skontaktuj się z nami. Odpowiemy najszybciej jak to możliwe.</div>
       </div>
       <div className='limited-contact-form'>
         <div className='row g-0'>
@@ -16,7 +16,7 @@ export function ContactCard() {
             <input placeholder='Imię' type="text" className='form-control'></input>
           </div>
           <div className='col-md-6 col-12 px-4'>
-            <input placeholder='Adres e-mail' type="text" className='form-control'></input>
+            <input placeholder='Adres e-mail' type="email" className='form-control'></input>
           </div>
         </div>
         <div className='row g-0'>

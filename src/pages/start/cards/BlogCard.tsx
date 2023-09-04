@@ -1,11 +1,13 @@
 import './BlogCard.scss';
 import { BlogPostsInfo } from '../../blog/post-meta';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '../../../components/Button';
 
 const blogPosts = import.meta.compileTime<BlogPostsInfo>("../../blog/post-meta.ts")
 
 export function BlogCard() {
+
+    const navigator = useNavigate();
 
     const posts = [...blogPosts]
         .sort((a, b) => a.createdOn.valueOf() - b.createdOn.valueOf())
@@ -14,9 +16,11 @@ export function BlogCard() {
     return (
         <div id="blog" className="stripe blog">
             <div className='row g-0'>
-                <h2 className='centered'>Our Latest Blog</h2>
-                <div className="lead-text centered">Latest News And Inspirational Stories</div>
-                <div className='content-text centered'>Positive pleasure-oriented goals are much more powerful motivators than negative fear-based ones. Although each is successful separately</div>
+                <h2 className='centered'>Nasz Blog</h2>
+                <div className="lead-text centered">Nasze najnowsze artykuły</div>
+                <div className='content-text centered'>
+                    Ciekawe artykuły opisujące techniczne aspekty tworzenia stron internetowych i aplikacji komputerowych
+                </div>
             </div>
             <div className='blog-index row g-0 px-5'>
                 {posts.map(post => (
@@ -31,7 +35,7 @@ export function BlogCard() {
             </div>
             <div className='row g-0'>
                 <div className='col-12 px-4 pt-4'>
-                    <Button label="Czytaj więcej" />
+                    <Button onClick={() => navigator('/blog')} label="Czytaj więcej" />
                 </div>
             </div>
         </div>
