@@ -7,8 +7,12 @@ export const FeaturedPosts = ({ root }: { root: string }) => {
     return (
         <aside className='rightContainer'>
             <div className='welcomeText'>
-                <h2>Welcome to Community</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <h2>
+                    Blog
+                </h2>
+                <p>
+                    Ciekawe artykuły opisujące techniczne aspekty tworzenia stron internetowych i aplikacji komputerowych.
+                </p>
             </div>
             <div className='featuredPosts'>
                 {blogPosts
