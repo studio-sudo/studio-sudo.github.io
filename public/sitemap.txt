@@ -1,0 +1,7 @@
+https://sudo-studio.pl/
+https://sudo-studio.pl/blog
+https://sudo-studio.pl/blog/aplikacja-webowa-czy-desktopowa
+https://sudo-studio.pl/blog/cors-a-indeksowanie-stron-w-google
+https://sudo-studio.pl/blog/czy-google-indeksuje-tresc-dostarczana-przez-javascript
+https://sudo-studio.pl/blog/kluczowe-aspekty-indeksowania-stron
+https://sudo-studio.pl/blog/spa-wady-i-zalety
