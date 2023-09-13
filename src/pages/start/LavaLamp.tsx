@@ -4,7 +4,7 @@ import { isReducedMotion } from '../../reduced-motion';
 
 const SPEED_MOD = 0.25;
 const SIZE_MOD = 0.35;
-const COUNT_MOD = 2;
+const COUNT_MOD = 1;
 const GRID_SIZE = 30;
 
 let cell_size = Math.ceil(document.body.clientWidth/(GRID_SIZE - 1));
