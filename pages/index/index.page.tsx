@@ -1,5 +1,5 @@
 import { useLayoutEffect } from 'react';
-import './App.scss'
+import './index.page.scss'
 import { StartCard } from './cards/StartCard'
 import { ServicesCard } from './cards/ServicesCard';
 import { AboutUsCard } from './cards/AboutUsCard';
@@ -26,7 +26,7 @@ const storeScroll = () => {
   document.documentElement.dataset.scroll = window.scrollY.toString();
 };
 
-function App() {
+export function Page() {
   useLayoutEffect(() => {
     document.addEventListener('scroll', debounce(storeScroll));
     storeScroll();
@@ -43,5 +43,3 @@ function App() {
     </>
   )
 }
-
-export default App

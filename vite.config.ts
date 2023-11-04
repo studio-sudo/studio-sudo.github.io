@@ -1,19 +1,20 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import react from '@vitejs/plugin-react'
+import vike from 'vike/plugin'
 import { Mode, plugin as markdown } from 'vite-plugin-markdown';
-import compileTime from "@wahyubucil/vite-plugin-compile-time"
+import { UserConfig } from 'vite'
 
-// https://vitejs.dev/config/
-export default defineConfig({
+const config: UserConfig = {
   plugins: [
-    compileTime(),
     react(),
     markdown({
       mode: [Mode.REACT]
     }),
+    vike({ prerender: { noExtraDir: true } })
   ],
   build: {
     outDir: './docs',
     emptyOutDir: true
   }
-})
+}
+
+export default config

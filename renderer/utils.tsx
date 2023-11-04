@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect } from "react";
-import { RouteObject, useLocation } from "react-router-dom"
+import { usePageContext } from "./usePageContext";
 
 export const getMarkdownName = (path: string): string => {
     return path.split('\\').pop()!.split('/').pop()!.split('.').shift()!;
@@ -28,11 +28,11 @@ export const getMarkdownPage = (path: string, loader: () => Promise<unknown>, Wr
 }
 
 export const useScrollToTop = () => {
-    const { pathname } = useLocation();
+    const pageContext = usePageContext()
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [pathname]);
+    }, [pageContext.urlPathname]);
 }
 
 export const hashCode = (data: string, seed: number = 0) => {

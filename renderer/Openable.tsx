@@ -1,7 +1,7 @@
 import { ReactNode, useEffect, useRef, useState } from "react"
 import { Button } from "./Button";
 import './Openable.scss';
-import { isReducedMotion } from "../reduced-motion";
+import { isReducedMotion } from "../pages/index/reduced-motion";
 
 type IOpenable = {
     label: string;

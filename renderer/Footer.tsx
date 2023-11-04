@@ -1,15 +1,15 @@
-import { NavLink } from 'react-router-dom';
 import './Footer.scss';
 import companyLogo from '../assets/logo-light-bg.png';
+import { Link } from './Link';
 
 
 export function Footer() {
     return <footer>
         <div className='row g-0 p-5'>
             <div className="col-12 col-md-4 footerModule">
-                <NavLink className='logoFooter' to='/'>
+                <Link className='logoFooter' href='/'>
                     <img className='logoFooter' width="150" height="45" alt="Logo firmy" src={companyLogo} />
-                </NavLink>
+                </Link>
                 <p>
                     Specjalizujemy się w tworzeniu rozwiązań informatycznych specjalnie dostosowanych do Twojego biznesu.
                     Niech nasze usługi wprowadzą Twój biznes w erę cyfryzacji!
