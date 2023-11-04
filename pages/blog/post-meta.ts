@@ -1,4 +1,4 @@
-import { getMarkdownName } from "../../utils";
+import { getMarkdownName } from "../../renderer/utils";
 import { readFileSync } from 'fs';
 import fglob from 'fast-glob';
 import fm from 'front-matter';

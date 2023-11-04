@@ -1,13 +1,15 @@
 import { IsoLine, IsoPoint, isoLines } from 'marchingsquares';
 import { useEffect } from 'react';
-import { isReducedMotion } from '../../reduced-motion';
+import { isReducedMotion } from './reduced-motion';
 
 const SPEED_MOD = 0.25;
 const SIZE_MOD = 0.35;
 const COUNT_MOD = 1;
 const GRID_SIZE = 30;
 
-let cell_size = Math.ceil(document.body.clientWidth/(GRID_SIZE - 1));
+const isBrowser = typeof window !== "undefined"
+
+let cell_size = Math.ceil(isBrowser ? document.body.clientWidth/(GRID_SIZE - 1) : 16);
 function pointToCommand(p: IsoPoint, index: number): string {
     const x = (p[0] * cell_size);
     const y = (p[1] * cell_size);
