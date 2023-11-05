@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "../../renderer/Link";
 import { BlogPostsInfo } from "./post-meta";
 
 const blogPosts = import.meta.compileTime<BlogPostsInfo>("./post-meta.ts");
@@ -19,7 +19,7 @@ export const FeaturedPosts = ({ root }: { root: string }) => {
                     .filter(post => post.isRecommended)
                     .map(post => (
                     <article className='articleItem' key={post.slug}>
-                        <Link to={`${root}${post.slug}`}><h3 className='articleTitle'>{post.title}</h3></Link>
+                        <Link href={`${root}${post.slug}`}><h3 className='articleTitle'>{post.title}</h3></Link>
                     </article>
                     ))}
             </div>
