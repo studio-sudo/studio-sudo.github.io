@@ -1,5 +1,4 @@
 import { useLayoutEffect } from 'react';
-import './index.page.scss'
 import { StartCard } from './cards/StartCard'
 import { ServicesCard } from './cards/ServicesCard';
 import { AboutUsCard } from './cards/AboutUsCard';
