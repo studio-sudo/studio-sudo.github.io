@@ -1,5 +1,5 @@
 export { render }
-export const passToClient = ['pageProps', 'urlPathname']
+export const passToClient = ['pageProps', 'urlPathname', 'routeParams']
 
 import ReactDOMServer from 'react-dom/server'
 import { PageShell } from './PageShell'
