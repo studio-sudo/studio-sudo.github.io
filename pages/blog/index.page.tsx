@@ -11,13 +11,13 @@ export function Page() {
       <section className='leftContainer'>
         {blogPosts.map(post => (
           <article className='articleItem' key={post.slug}>
-            <h2 className='articleTitle'><Link href={'./' + post.slug}>{post.title}</Link></h2>
+            <h2 className='articleTitle'><Link href={'/blog/' + post.slug}>{post.title}</Link></h2>
             <p>{post.description}</p>
-            <Link className='readMoreLink' href={'./' + post.slug}>Czytaj dalej »</Link>
+            <Link className='readMoreLink' href={'/blog/' + post.slug}>Czytaj dalej »</Link>
           </article>
         ))}
       </section>
-      <FeaturedPosts root='./' />
+      <FeaturedPosts root='/blog/' />
     </div>
   )
 }

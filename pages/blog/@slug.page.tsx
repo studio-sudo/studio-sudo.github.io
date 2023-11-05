@@ -1,4 +1,5 @@
 import './blog-page.scss'
+import './blog-index.scss'
 import type { BlogPostsInfo } from './post-meta';
 import { FeaturedPosts } from './featured-posts';
 import { usePageContext } from '../../renderer/usePageContext';
@@ -14,6 +15,6 @@ export function Page() {
             <p>{data.description}</p>
             <section dangerouslySetInnerHTML={{ __html: data.body }}></section>
         </article>
-        <FeaturedPosts root='../'/>
+        <FeaturedPosts root='/blog/'/>
     </div>
 }
