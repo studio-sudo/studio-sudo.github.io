@@ -97,7 +97,3 @@ header {
 html:not([data-scroll="0"]) header {
   box-shadow: var(--shadow);
 }
-
-header+* {
-  margin-top: 128px;
-}

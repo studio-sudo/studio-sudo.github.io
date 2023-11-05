@@ -24,7 +24,9 @@ export const Wrapper = ({ children }: { children: React.ReactNode }) => {
 
   return (<>
       <Header isIndex={pageContext.urlPathname === '/'}/>
-      {children}
+      <main>
+        {children}
+      </main>
       <Footer />
   </>);
 }
