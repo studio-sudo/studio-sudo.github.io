@@ -9,7 +9,7 @@ const blogPosts = import.meta.compileTime<BlogPostsInfo>("./post-meta.ts");
 export function Page() {
     const pageContext = usePageContext();
     const data = blogPosts.find(post => post.slug === pageContext.routeParams!.slug)!;
-    return <div className='blogContainer'>
+    return <div className='blogContainer mx-md-5'>
         <article className='leftContainer'>
             <h1 className='articleTitle'>{data.title}</h1>
             <p>{data.description}</p>

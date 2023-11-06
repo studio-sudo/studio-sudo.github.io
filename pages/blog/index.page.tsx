@@ -7,7 +7,7 @@ const blogPosts = import.meta.compileTime<BlogPostsInfo>("./post-meta.ts")
 
 export function Page() {
   return (
-    <div className='blogContainer'>
+    <div className='blogContainer mx-md-5'>
       <section className='leftContainer'>
         {blogPosts.map(post => (
           <article className='articleItem' key={post.slug}>
