@@ -5,19 +5,27 @@ import './ContactCard.scss';
 export function ContactCard() {
   const submitForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    document.querySelectorAll("form.limited-contact-form input")
+        .forEach(i => i.setAttribute('disabled', ''));
+    const button = document.getElementById("contact-button")!;
+    button.setAttribute('disabled', '');
+    button.style.pointerEvents = "none";
+    button.innerText = "Wysyłanie ...";
+
     const formData = new FormData(e.currentTarget);
     const xhr = new XMLHttpRequest();
     xhr.open("POST", e.currentTarget.action, true);
     xhr.send(formData);
     xhr.onload = function() {
-      const button = document.getElementById("contact-button")!;
       if (xhr.status === 200) {
         button.innerText = "Dziękujemy! Postaramy się odpowiedzieć w przeciągu jednego dnia roboczego.";
       } else {
-        button.innerText = "Chyba powstał jakiś błąd! Jeśli możesz, spróbuj ponownie za chwilę.";
+        button.style.pointerEvents = "unset";
+        button.innerText = "Wystąpił jakiś błąd! Jeśli możesz, spróbuj ponownie za chwilę.";
+        document.querySelectorAll("form.limited-contact-form input")
+            .forEach(i => i.removeAttribute('disabled'));
       }
-      button.style.pointerEvents = "none";
-      button.style.cursor = "not-allowed";
     };
   }
 
