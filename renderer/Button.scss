@@ -5,6 +5,7 @@ button {
     text-transform: uppercase;
     font-weight: 700;
     cursor: pointer;
+    user-select: none;
     transition: 0.25s;
     &.primary {
         color: var(--milky-color);

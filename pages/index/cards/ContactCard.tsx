@@ -16,6 +16,8 @@ export function ContactCard() {
       } else {
         button.innerText = "Chyba powstał jakiś błąd! Jeśli możesz, spróbuj ponownie za chwilę.";
       }
+      button.style.pointerEvents = "none";
+      button.style.cursor = "not-allowed";
     };
   }
 
