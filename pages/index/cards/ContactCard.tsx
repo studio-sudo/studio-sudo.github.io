@@ -10,31 +10,27 @@ export function ContactCard() {
         <div className="lead-text centered">Skontaktuj się z nami</div>
         <div className='content-text centered'>Jeśli masz jakieś pytania odnośnie wykonania projektu, skontaktuj się z nami. Odpowiemy najszybciej jak to możliwe.</div>
       </div>
-      <div className='limited-contact-form'>
+      <iframe name="hiddenFrame" width="0" height="0" style={{display: 'none', border: 'none'}}></iframe>
+      <form className='limited-contact-form' action="https://usebasin.com/f/0d53809b0589" method="POST" target="hiddenFrame" encType="multipart/form-data">
         <div className='row g-0'>
           <div className='col-md-6 col-12 px-4'>
-            <input placeholder='Imię' type="text" className='form-control'></input>
+            <input placeholder='Imię' name="name" type="text" className='form-control' required></input>
           </div>
           <div className='col-md-6 col-12 px-4'>
-            <input placeholder='Adres e-mail' type="email" className='form-control'></input>
+            <input placeholder='Adres e-mail' name="email" type="email" className='form-control' required></input>
           </div>
         </div>
         <div className='row g-0'>
           <div className='col-12 px-4'>
-            <input placeholder='Tytuł' type="text" className='form-control'></input>
-          </div>
-        </div>
-        <div className='row g-0'>
-          <div className='col-12 px-4'>
-            <textarea placeholder='Treść' rows={10} className='form-control' />
+            <textarea placeholder='Treść' name="content" rows={10} className='form-control' required/>
           </div>
         </div>
         <div className='row g-0'>
           <div className='col-12 px-4 pt-4'>
-            <Button label="Wyślij" />
+            <Button kind="submit" label="Wyślij" />
           </div>
         </div>
-      </div>
+      </form>
     </div>
   )
 }

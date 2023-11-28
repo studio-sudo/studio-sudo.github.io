@@ -4,10 +4,11 @@ type IButton = {
     label: string;
     type?: 'primary' | 'secondary';
     onClick?: () => void;
+    kind?: 'button' | 'submit' | 'reset'
 }
 
-export function Button({ label, type = 'primary', onClick }: IButton) {
+export function Button({ label, type = 'primary', onClick, kind }: IButton) {
     return (
-        <button className={type} onClick={onClick}>{label}</button>
+        <button className={type} onClick={onClick} type={kind}>{label}</button>
     )
 }
