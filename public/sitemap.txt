@@ -5,3 +5,5 @@ https://sudo-studio.pl/blog/cors-a-indeksowanie-stron-w-google
 https://sudo-studio.pl/blog/czy-google-indeksuje-tresc-dostarczana-przez-javascript
 https://sudo-studio.pl/blog/kluczowe-aspekty-indeksowania-stron
 https://sudo-studio.pl/blog/spa-wady-i-zalety
+https://sudo-studio.pl/blog/czym-jest-thin-content
+https://sudo-studio.pl/blog/strona-404-jej-zadanie-i-tresc
